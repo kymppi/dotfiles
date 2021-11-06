@@ -1,0 +1,158 @@
+:root {
+    --vile-font-family: "JetBrainsMono Nerd Font Mono";
+    --vile-bg-dark: #0f140f;
+    --vile-bg-normal: #1f281c;
+    --vile-fg-focus: #ecf39e;
+    --vile-fg-normal: #acb44a;
+}
+
+.theme-dark {
+    --text-normal: var(--vile-fg-focus);
+    --text-muted: var(--vile-fg-normal);
+
+    --header-primary: var(--vile-fg-normal);
+    --header-secondary: var(--vile-fg-focus);
+
+    --background-primary: var(--vile-bg-dark);
+    --background-secondary: var(--vile-bg-normal);
+    --background-secondary-alt: var(--vile-bg-dark);
+    --background-tertiary: var(--vile-bg-dark);
+    --background-accent: var(--vile-fg-normal);
+    --background-floating: var(--vile-bg-normal);
+    --deprecated-store-bg: var(--vile-bg-normal);
+    --activity-card-background: var(--vile-bg-dark);
+    --deprecated-panel-background: var(--vile-bg-dark);
+    --background-modifier-selected: var(--vile-bg-dark);
+    --background-message-hover: var(--vile-bg-dark);
+
+    --elevation-high: 0 8px 16px rgba(0, 0, 0, 0.24);
+    --background-modifier-hover: rgba(79, 84, 92, 0.16);
+    --background-modifier-active: rgba(79, 84, 92, 0.24);
+    --background-modifier-accent: rgba(0, 0, 0, 0);
+
+    --interactive-normal: var(--vile-fg-normal);
+    --interactive-hover: var(--vile-fg-focus);
+    --interactive-active: var(--vile-fg-focus);
+    --interactive-muted: #666666;
+
+    --channels-default: var(--vile-fg-normal);
+    --channeltextarea-background: var(--vile-bg-normal);
+
+    --scrollbar-thin-thumb: var(--vile-fg-normal);
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--vile-fg-normal);
+}
+
+[class*="partyMembers"] {
+    box-shadow: 0 0 0px !important;
+}
+
+/* Removes welcome sticker button */
+[class*="welcome"] {
+    visibility: hidden;
+    height: 0px;
+}
+
+/* Font Settings */
+* {
+    font-family: "JetBrainsMono Nerd Font Mono" !important;
+}
+
+[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"] {
+    height: 28px !important;
+}
+
+[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"] > * {
+    font-size: 14px !important;
+}
+
+[class*="messageContent"] {
+    font-size: 12px !important;
+    margin-top: 0px;
+}
+
+[class*="emoji"] {
+    font-size: 105%;
+}
+
+[class*="name"] {
+    font-size: 14px;
+}
+
+[id*="popout"] [class*="container"] ::after,
+[id*="popout"] [class*="container"] {
+    font-size: 10px !important
+}
+/* End font settings */
+
+/* General color and shadow configuration */
+[class*="comment"] {
+    color: #666666;
+}
+
+[class*="lookBlank"] {
+    color: var(--vile-fg-focus);
+}
+
+[class*="newMessagesBar"],
+[class*="peopleColumn"],
+[class*="folder"][class*="hover"],
+[class*="autocompleteRowContent"],
+[class*="autocomplete"],
+[class*="headerTop"],
+[class*="userPopout"] [class*="headerNormal"],
+[class*="userPopout"] [class*="body"],
+[class*="userPopout"] [class*="footer"] {
+    background-color: var(--vile-bg-normal);
+}
+
+[class*="base"][class*="selected"][class*="selectable"] {
+    background-color: var(--vile-fg-normal) !important;
+}
+
+[class*="base"][class*="selected"][class*="selectable"] * {
+    background-color: var(--vile-fg-normal) !important;
+    color: var(--vile-bg-dark);
+}
+
+[class*="headerPlaying"] * {
+    background-color: var(--vile-bg-normal) !important;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-handle,
+::-webkit-scrollbar-track-piece {
+    border-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+[class*="item-3HknzM"] {
+    background-color: var(--vile-bg-normal) !important;
+    color: var(--vile-fg-normal) !important;
+}
+
+[class*="item-3HknzM"] [class*="ring"] {
+    background-color: var(--vile-bg-normal) !important;
+    color: var(--vile-fg-normal) !important;
+}
+
+[class*="profileBadges"] {
+    box-shadow: 0 0 0px !important;
+}
+
+[id*="popout"] [class*="container"] {
+    background-color: var(--vile-bg-normal);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+    color: var(--vile-bg-normal) !important;
+}
+
+[class*="popout-APcvZm"] {
+    background-color: var(--vile-bg-normal);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+[id*="popout"] [class*="container"] ::after {
+    background-image: none !important;
+    font-size: 10px !important;
+}

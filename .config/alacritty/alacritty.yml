@@ -1,0 +1,77 @@
+window:
+  padding:
+    x: 10
+    y: 10
+
+  title: Alacritty
+
+# Font configuration
+font:
+  normal:
+    family: JetBrainsMono Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: JetBrainsMono Nerd Font Mono
+    style: Bold
+  
+  italic:
+    family: JetBrainsMono Nerd Font Mono
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font Mono
+    style: Bold Italic
+
+  size: 9
+
+# Colors
+schemes:
+  everforest_dark: &everforest_dark
+    primary:
+      background: '#0f140f'
+      foreground: '#d3c6aa'
+    normal:
+      black:   '#404a4f'
+      red:     '#de5456'
+      green:   '#8eae5b'
+      yellow:  '#d2ac60'
+      blue:    '#54a095'
+      magenta: '#cb7ca2'
+      cyan:    '#6ab47c'
+      white:   '#c7b794'
+    bright:
+      black:   '#4b565c'
+      red:     '#e67e80'
+      green:   '#a7c080'
+      yellow:  '#dbbc7f'
+      blue:    '#7fbbb3'
+      magenta: '#d699b6'
+      cyan:    '#83c092'
+      white:   '#d3c6aa'
+  hybrid: &hybrid
+    primary:
+      background: '0x0f140f'
+      foreground: '0xcccccc'
+    normal:
+      black:   '0x282a2e'
+      red:     '0xa54242'
+      green:   '0x8c9440'
+      yellow:  '0xde935f'
+      blue:    '0x5f819d'
+      magenta: '0x85678f'
+      cyan:    '0x5e8d87'
+      white:   '0x707880'
+    bright:
+      black:   '0x373b41'
+      red:     '0xcc6666'
+      green:   '0xb5bd68'
+      yellow:  '0xf0c674'
+      blue:    '0x81a2be'
+      magenta: '0xb294bb'
+      cyan:    '0x8abeb7'
+      white:   '0xc5c8c6'
+colors: *everforest_dark
+
+background_opacity: 1
+
