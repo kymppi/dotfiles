@@ -68,7 +68,7 @@ local sidemenu = function(s)
                 box(wibox.widget.textbox("Shell: " .. awful.util.shell)),
                 layout = wibox.layout.flex.horizontal,
             },
-            box(command("/bin/sh -c 'echo \"Uptime: $(~/scripts/uptime-clean)\"'", 1)),
+            box(command("/bin/sh -c 'echo \"Uptime: $(~/.config/scripts/uptime.sh)\"'", 1)),
             {
                 box(command("/bin/sh -c 'ps -eo comm:26,%cpu --sort=-%cpu | head -n5'",1)),
                 box(command("/bin/sh -c 'ps -eo comm:26,%mem --sort=-%mem | head -n5'",1)),
