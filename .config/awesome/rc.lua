@@ -24,7 +24,7 @@ if awesome.startup_errors then
                      text = awesome.startup_errors })
 end
 
-beautiful.theme_path = "/home/drvilepis/.config/awesome/themes/viletheme/"
+beautiful.theme_path = "/home/midka/.config/awesome/themes/viletheme/"
 
 do
     local in_error = false
@@ -44,13 +44,13 @@ end
 -- {{{ Variable definitions
 beautiful.init("~/.config/awesome/themes/viletheme/theme.lua")
 
--- local themes_path = "/home/drvilepis/.config/awesome/themes/"
+-- local themes_path = "/home/midka/.config/awesome/themes/"
 
 terminal = "alacritty"
 editor = "nano"
 editor_cmd = terminal .. " -e " .. editor
 
-awful.util.shell = "/bin/dash"
+awful.util.shell = "/bin/zsh"
 
 
 -- Modkey
@@ -363,7 +363,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- right widgets
             layout = wibox.layout.fixed.horizontal,
             rounded_box({
-                awful.widget.watch('/bin/sh -c ~/scripts/weather', 3600),
+                awful.widget.watch('/bin/sh -c ~/.config/scripts/weather.sh', 3600),
                 widget = wibox.container.margin,
                 right = 8,
                 left = 8
@@ -613,5 +613,6 @@ client.connect_signal("unfocus", function(c)
         end)
 -- }}}
 do
-   awful.spawn("/home/drvilepis/.config/awesome/autorun.sh",false)
+   awful.spawn("/home/midka/.config/awesome/autorun.sh",false)
 end
+
