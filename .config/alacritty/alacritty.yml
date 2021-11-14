@@ -73,5 +73,5 @@ schemes:
       white:   '0xc5c8c6'
 colors: *everforest_dark
 
-background_opacity: 0.2
+background_opacity: 0.3
 
