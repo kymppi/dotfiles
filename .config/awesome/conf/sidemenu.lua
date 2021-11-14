@@ -49,19 +49,17 @@ local sidemenu = function(s)
                 layout = wibox.layout.flex.horizontal,
             },
             {
-                {
-                    box(command("/bin/sh -c 'echo \"kernel: $(uname -r)\"'")),
-                    box(command("/bin/sh -c 'echo \"packages: $(pacman -Q | wc -l)\"'")),
-                    layout = wibox.layout.align.vertical,
-                },
-                box({
-                    command("/bin/sh -c ~/scripts/disk-usage", 600),
-                    command("/bin/sh -c ~/scripts/disk-usage-home", 600),
-                    command("/bin/sh -c ~/scripts/disk-usage-games", 600),
+                box(command("/bin/sh -c 'echo \"kernel: $(uname -r)\"'")),
+                box(command("/bin/sh -c 'echo \"packages: $(pacman -Q | wc -l)\"'")),
+                layout = wibox.layout.align.vertical,
+            },
+	    {
+	    	box({
+                    command("/bin/sh -c ~/.config/scripts/disk-usage", 600),
                     layout = wibox.layout.align.vertical,
                 }),
                 layout = wibox.layout.flex.horizontal,
-            },
+	    },
             {
                 box(wibox.widget.textbox("AwesomeWM " .. awesome.version)),
                 box(wibox.widget.textbox("Hostname: " .. awesome.hostname)),

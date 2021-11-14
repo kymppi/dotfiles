@@ -47,7 +47,7 @@ beautiful.init("~/.config/awesome/themes/viletheme/theme.lua")
 -- local themes_path = "/home/midka/.config/awesome/themes/"
 
 terminal = "alacritty"
-editor = "nano"
+editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 awful.util.shell = "/bin/zsh"

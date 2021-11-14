@@ -1,0 +1,5 @@
+( if
+( begin
+( spawn_async (str "transset-df -i " (window_xid) " 1" ))
+)
+)
