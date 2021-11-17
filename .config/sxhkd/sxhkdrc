@@ -1,0 +1,32 @@
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# multimedia keys
+
+# Increase volume
+XF86AudioRaiseVolume
+   pactl -- set-sink-volume 0 +2% 
+
+# Decrease volume
+XF86AudioLowerVolume
+    pactl -- set-sink-volume 0 -2%
+
+# Mute Audio
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Play
+XF86AudioPlay
+    playerctl play-pause
+
+# Next
+XF86AudioNext
+    playerctl next
+
+# Previous
+XF86AudioPrev
+   playerctl previus 
+
+# Stop
+XF86AudioStop
+   playerctl stop 

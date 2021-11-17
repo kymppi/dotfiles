@@ -10,3 +10,4 @@ run nitrogen --restore
 run ckb-next-daemon
 run pulseaudio -D
 run gnome-keyring-daemon
+run xcompmgr &
