@@ -363,6 +363,12 @@ awful.screen.connect_for_each_screen(function(s)
         { -- right widgets
             layout = wibox.layout.fixed.horizontal,
             rounded_box({
+                awful.widget.watch('/bin/sh -c ~/.config/scripts/headphone_battery.sh', 2),
+                widget = wibox.container.margin,
+                right = 8,
+                left = 8
+            }),
+            rounded_box({
                 awful.widget.watch('/bin/sh -c ~/.config/scripts/weather.sh', 3600),
                 widget = wibox.container.margin,
                 right = 8,
