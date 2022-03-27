@@ -17,14 +17,14 @@ theme.font = "JetBrainsMono Nerd Font Mono 9"
 theme.color1 = "#17c5ff"
 theme.color2 = "#363435"
 theme.color3 = "#ff54aa"
-theme.gray1 = "#0f140f"
-theme.gray2 = "#1f281c"
+theme.gray1 = "#333333"
+theme.gray2 = "#383838"
 theme.red1 = "#D72638"
 
 theme.bg_normal = theme.gray1
 theme.bg_focus = theme.color1
 theme.bg_urgent = theme.red1
-theme.bg_minimize = "#0c0c0c"
+theme.bg_minimize = "#303030"
 theme.bg_systray = theme.bg_normal
 
 theme.fg_normal = theme.color3
