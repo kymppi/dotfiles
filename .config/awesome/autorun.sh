@@ -8,6 +8,9 @@ function run {
 
 run nitrogen --restore
 run ckb-next-daemon
+run ckb-next
 run gnome-keyring-daemon
 run xcompmgr &
 run sxhkdd &
+run discord
+run firefox

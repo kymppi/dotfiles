@@ -1,0 +1,1 @@
+playerctl metadata --format "Now playing: {{ artist }} - {{ title }}"

@@ -13,4 +13,4 @@ case "$output" in
     ;; 
 esac
 
-echo "Void Pro Battery: $output"
+echo "Headphones: $output"
