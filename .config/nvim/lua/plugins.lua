@@ -7,7 +7,13 @@ return require('packer').startup(function()
  	use { 'ms-jpq/coq_nvim', branch = 'coq', run = ':COQdeps'}
  	use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
  	use 'norcalli/snippets.nvim'  
- 
+
+    -- TestausTime
+    use {
+        'lajp/testaustime-nvim', 
+        run = 'cabal install --overwrite-policy=always'
+    }
+
     -- Navigation
     use 'ggandor/lightspeed.nvim'
 
