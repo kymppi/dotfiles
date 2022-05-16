@@ -103,3 +103,5 @@ fi
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ls="exa -la"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+eval "$(starship init zsh)"
