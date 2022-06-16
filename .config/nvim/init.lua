@@ -1,78 +1,20 @@
--- Load plugins
-require('plugins')
+local vim_config_root = vim.fn.expand("<sfile>:p:h")
+local pack_path = vim.fn.stdpath("data") .. "/site/pack"
 
-vim.opt.termguicolors = true
+function ensure(user, repo, branch, commit)
+  local install_path = pack_path .. "/packer/start/" .. repo
+  if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    vim.fn.system({"git", "clone", "--depth", "1", "--branch", branch, "https://github.com/" .. user .. "/" .. repo, install_path})
+    if commit ~= nil then
+      vim.fn.system({"git", "--git-dir", install_path .. "/.git", "reset", "--hard", commit})
+    end
+    vim.api.nvim_command(string.format("packadd %s", repo))
+  end
+end
 
--- Lualine for statusline
-require('vile-lualine')
+ensure("wbthomason", "packer.nvim", "master")
+ensure("Olical", "aniseed", "master")
+ensure("lewis6991", "impatient.nvim", "main")
 
--- Everforest colorscheme
-vim.cmd("colorscheme everforest")
-vim.g.everforest_transparent_background = 1
-
--- Coq autocompletion
-vim.g.coq_settings = { auto_start = 'shut-up' }
-require('coq')
-
--- Rust-analyzer options
-require'lspconfig'.rust_analyzer.setup{}
-rust = require('rust-tools')
-rust.setup({
-    tools = {
-        hover_with_actions = true,
-        hover_actions = {
-            auto_focus = true
-        }
-    }
-})
-
-
--- Devicons for icons in nvimtree and bufferline
-require'nvim-web-devicons'.setup {
-    override = {
-        zsh = {
-            icon = "",
-            color = "#428850",
-            name = "Zsh"
-        }
-    };
-    default = true;
-}
-
--- Telescope for fuzzyfinder
-require('telescope').setup{}
-
-require('gitsigns').setup{}
-
--- Treesitter for syntax highlighting
-vim.g.indent_blankline_use_treesitter = true
-require'nvim-treesitter.configs'.setup {
-    highlight = {
-        enable = true,
-    },
-}
-
-vim.cmd [[highlight indent1 guifg=#E06C75 gui=nocombine]]
-vim.cmd [[highlight indent2 guifg=#ffffff gui=nocombine]]
-
--- Indentation guides
-require("indent_blankline").setup {
-    char = "|",
-    buftype_exclude = {"terminal"},
-}
-
--- Nvim-tree setup
-require'nvim-tree'.setup {
-    update_focused_file = {
-        enable = true,
-    }
-}
-
-require('lightspeed').setup {}
-
--- Bufferline for buffer tabs
-require("bufferline").setup{}
-
--- General 
-require('core.settings')
-require('core.keybinds')
+require("impatient")
+vim.g["aniseed#env"] = {compile = true}
