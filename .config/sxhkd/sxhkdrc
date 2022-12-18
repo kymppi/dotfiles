@@ -8,15 +8,15 @@ super + Escape
 
 # Increase volume
 XF86AudioRaiseVolume
-    pactl set-sink-volume 1 +2%
+    pactl set-sink-volume @DEFAULT_SINK@ +2%
 
 # Decrease volume
 XF86AudioLowerVolume
-    pactl set-sink-volume 1 -2%
+    pactl set-sink-volume @DEFAULT_SINK@ -2%
 
 # Mute Audio
 XF86AudioMute
-    pactl set-sink-mute 1 toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Play
 XF86AudioPlay

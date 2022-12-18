@@ -102,6 +102,8 @@ fi
 # Example aliases
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ls="exa -la"
+alias cat="bat"
+alias please="sudo"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 eval "$(starship init zsh)"
@@ -115,9 +117,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# ssh agent
+eval `ssh-agent`
+ssh-add
+
 # bun completions
 [ -s "/home/midka/.bun/_bun" ] && source "/home/midka/.bun/_bun"
 
 # bun
 export BUN_INSTALL="/home/midka/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

@@ -11,6 +11,9 @@ run ckb-next-daemon
 run ckb-next
 run gnome-keyring-daemon
 run xcompmgr &
-run sxhkdd &
+run sxhkd &
 run discord
 run firefox
+run xscreensaver
+run breaktimer
+run thunderbird
