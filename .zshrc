@@ -2,7 +2,8 @@
 /home/midka/scripts/tmux.sh
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH="$HOME/.luarocks/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/midka/.oh-my-zsh"
@@ -104,9 +105,11 @@ alias zshconfig="$EDITOR ~/.zshrc"
 alias ls="exa -la"
 alias cat="bat"
 alias please="sudo"
+alias music="ytmdesktop-bin --no-sandbox"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 
 # pnpm
 export PNPM_HOME="/home/midka/.local/share/pnpm"
@@ -129,3 +132,12 @@ export BUN_INSTALL="/home/midka/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export SOPS_AGE_KEY_FILE="~/.config/sops/age/keys.txt"
+
+# https://stackoverflow.com/questions/18215389/how-do-i-measure-request-and-response-times-at-once-using-curl
+alias curltime="curl -w \"@$HOME/.curl-format.txt\" -o /dev/null -s "
+
+. "/usr/local/env"
+
+. "/home/midka/.wasmedge/env"
